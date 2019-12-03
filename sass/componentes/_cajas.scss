@@ -1,0 +1,117 @@
+.contenedor--cajas {
+	max-width: 1400px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.caja {
+	max-width: 430px;
+	@include caja();
+	&__contenido {
+		padding: 25px;
+		background-color: $color-claro;		
+	}
+	&__categoria {
+		color: $color-secundario;
+		@include titulos($Fuente2);
+	}
+	&__imagen{
+		position: relative;
+	}
+}
+
+.contenedor--cajas .caja a {
+	text-decoration: none;	
+	color: $color-variacion;
+	@include titulos($Fuente2);
+}
+
+.contenido {
+	margin-bottom: 40px;
+	justify-content: space-evenly;
+	display: flex;
+	width: 90%;
+	margin: 0 auto;
+	padding: 30px 0;
+} 
+
+.caja--con-fondo{
+	display: block;
+	box-shadow: none;
+	position: relative;
+	overflow: hidden;
+	background-color: $color-primario;
+	img{
+		display: block;
+		max-width: 100%;
+		max-height: auto;
+		position: absolute;
+		opacity: .5;
+		object-fit: contain;
+		
+	}
+	&__contenido{
+		padding: 50px 20px 20px 0;
+		position: relative;
+		
+		color: $color-claro;
+		p{
+			color: $color-claro;
+		}
+		h3{
+			color: $color-claro;
+		}
+		span{
+			margin: 20px -30px;
+			text-align: center;
+			@include media(desktop-s){
+				margin: 0 auto;
+			}
+		}
+		@include media(desktop-s){
+			padding: 20px;
+			
+		}
+	}
+	&__categoria{
+		display: block;
+		width: auto;
+		max-width: 150px;		
+		background-color: $color-secundario;
+		border-radius: 10px;
+		color: $color-claro;
+		padding-left: 10px;
+		@include titulos($Fuente2);
+		@include media(desktop-s){
+			margin: 0 auto;
+			padding-left: 0;
+			text-align: center;
+		}
+	}
+	&__stats{
+		position: relative;
+		display: block;
+		margin-left: 5px;
+		@include media(desktop-s){
+			display: flex;
+			justify-content: center;
+		}
+		
+		ul{
+			display: flex;
+			list-style: none;
+			padding: 0;
+		}
+		li{
+			color: get-opacity($color-claro, .8);
+			margin-right: 10px;
+		}
+	}
+}
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+.banner--homepage{
+    background-color: $color-secundario;
+    padding: 50px;
+    max-width: 300px;
+    margin:10px 30px 50px 30px ;
+    color: $color-claro;
+
+    h3{
+        
+        @include font-size(20px);
+        @include titulos($Fuente2);
+    }
+    p{
+        margin-top: 20px;
+        @include font-size(18px);
+        margin-bottom: 0px;
+        margin-bottom: 50px;
+    }
+    .button{
+        border: 2px solid get-opacity($color-claro, .3) ;
+        border-radius: 5px;
+        padding: 10px;
+        height: 50px;
+        @include titulos($Fuente2);
+    }
+}
+
